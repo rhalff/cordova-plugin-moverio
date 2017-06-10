@@ -1,12 +1,11 @@
 {
-  "name": "cordova-plugin-template",
+  "name": "cordova-plugin-moverio",
   "version": "1.0.0",
   "cordova": {
-    "id": "cordova-plugin-template",
+    "id": "cordova-plugin-moverio",
     "platforms": [
-      "android",
-      "ios"
+      "android"
     ]
   },
-  "description": "A starting point for a Cordova Plugin"
+  "description": "Cordova Moverio Plugin"
 }

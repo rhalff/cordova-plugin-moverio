@@ -1,37 +1,24 @@
 exports.defineAutoTests = function() {
   describe('Moverio (moverio)', function () {
-    it("should exist", function () {
+    it('should exist', function () {
       expect(moverio).toBeDefined();
     });
 
-    it("should contain a getSensorList function", function () {
+    it('should contain a getSensorList function', function () {
       expect(moverio.getSensorList).toBeDefined();
       expect(typeof moverio.getSensorList == 'function').toBe(true);
     });
-    it("should return a list of sensors", function () {
-      const sensorList = moverio.getSensorList();
+    it('should return a list of sensors', function (done) {
+      moverio.getSensorList()
+        .then(function (result) {
+          expect(result).toEqual([
 
-      expect(sensorList).toEqual([
+          ]);
 
-      ]);
+          done();
+        });
     });
   });
-
-	describe('awesome tests', function() {
-			it('do something sync', function() {
-				expect(1).toBe(1);
-			});
-
-			it('do something async', function(done) {
-					setTimeout(function() {
-							expect(1).toBe(1);
-							done();
-					}, 100);
-		 });
-	});
-
-	describe('more awesome tests', function() {
-	});
 };
 
 /*

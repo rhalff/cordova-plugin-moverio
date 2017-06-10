@@ -1,46 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
-    id="my-cordova-plugin"
+    id="cordova-plugin-moverio"
     version="1.0.0">
-    <name>Cordova Plugin Template</name>
+    <name>Cordova Moverio Plugin</name>
     <description></description>
     <license>MIT</license>
     <keywords></keywords>
-    <repo>https://github.com/driftyco/cordova-plugin-template.git</repo>
-    <issue>https://github.com/driftyco/cordova-plugin-template/issues</issue>
+    <repo>https://github.com/robberthalff/cordova-plugin-moverio.git</repo>
+    <issue>https://github.com/robberthalff/cordova-plugin-moverio/issues</issue>
 
-    <!-- android -->
     <platform name="android">
       <js-module src="www/plugin.js" name="plugin">
         <runs/>
-
-        <!-- This is the window variable name you want, like window.MyCordovaPlugin -->
-        <clobbers target="MyCordovaPlugin" />
+        <clobbers target="moverio" />
       </js-module>
       <config-file target="res/xml/config.xml" parent="/*">
-        <feature name="MyCordovaPlugin">
-          <param name="android-package" value="com.example.MyCordovaPlugin" />
+        <feature name="MoverioPlugin">
+          <param name="android-package" value="com.robberthalff.MoverioPlugin" />
           <param name="onload" value="true" />
         </feature>
       </config-file>
 
-      <source-file src="src/android/com/example/MyCordovaPlugin.java" target-dir="src/com/example/" />
-    </platform>
-
-    <!-- ios -->
-    <platform name="ios">
-        <js-module src="www/plugin.js" name="plugin">
-            <runs/>
-            <clobbers target="MyCordovaPlugin" />
-        </js-module>
-        <config-file target="config.xml" parent="/*">
-            <feature name="MyCordovaPlugin">
-                <param name="ios-package" value="MyCordovaPlugin" onload="true" />
-            </feature>
-        </config-file>
-
-        <header-file src="src/ios/MyCordovaPlugin.h" />
-        <source-file src="src/ios/MyCordovaPlugin.m" />
+      <source-file src="src/android/com/robberthalff/MoverioPlugin.java" target-dir="src/com/robberthalff/" />
     </platform>
 </plugin>
